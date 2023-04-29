@@ -2,11 +2,13 @@
 <script imports>
 // standard import line, 
 import HelloWorld from './components/HelloWorld.vue';
+import Button from './components/Button.vue';
 // exports the App component and all components used in app to the Index.html
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld, 
+    Button
   }
 }
 
@@ -15,5 +17,6 @@ export default {
 <template>
   <div>
     <HelloWorld/>
+    <Button/>
   </div>
 </template>
