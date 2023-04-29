@@ -4,8 +4,32 @@
 .intro {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+
+.name-input, 
+.message-input, 
+.email-input,
+.form-button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+
+}
+.name-input, 
+.message-input, 
+.email-input {
+    width: 100%
+}
+
+.form-container {
+    max-width: 90%;
+    margin: auto;
+    max-width: 1000px;
+}
 .counter-header {
     background-color: #000000;
     color: #fff;

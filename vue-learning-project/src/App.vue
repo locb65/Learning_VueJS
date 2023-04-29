@@ -4,13 +4,15 @@
 import HelloWorld from './components/HelloWorld.vue';
 import Button from './components/Button.vue';
 import Header from './components/Header.vue';
+import ContactMe from './components/ContactMe.vue';
 // exports the App component and all components used in app to the Index.html
 export default {
   name: 'App',
   components: {
     HelloWorld, 
     Button, 
-    Header
+    Header, 
+    ContactMe
   },
   // methods to be exported
   methods: {
@@ -51,5 +53,8 @@ export default {
       <Button @click="decrement" :count="count">Decrement</Button>
     </div>
     <p class="count-tracker">{{ count }}</p>
+  </div>
+  <div>
+    <ContactMe class="contact-form"/>
   </div>
 </template>
