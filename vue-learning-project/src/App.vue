@@ -10,11 +10,20 @@ export default {
     HelloWorld, 
     Button
   },
+  // methods to be exported
   methods: {
+    // event listener method for button
     clickedButton() {
-      console.log('I have been clicked')
+      this.count++
     }
-  }
+  },
+  // data is used to handle state in VueJs
+  // in this case data is handling the state of count which is being incremented when the button is clicked.
+  data() {
+    return {
+      count: 0
+    }
+  },
 }
 
 </script>
@@ -22,6 +31,12 @@ export default {
 <template>
   <div>
     <HelloWorld/>
-    <Button @click="clickedButton"/>
+    <!-- called button method on button -->
+    <!-- @click functions similiarly to onClick -->
+    <!-- :count="count" is passing the prop from the data function to the child component of Button -->
+    <!-- :count="count" is analogous to count={count} in reactjs
+    and it is also a shorthand version of v-bind:count='count' -->
+    <Button @click="clickedButton" :count="count"/>
+    <p>{{ count }}</p>
   </div>
 </template>
