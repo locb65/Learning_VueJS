@@ -3,12 +3,14 @@
 // standard import line, 
 import HelloWorld from './components/HelloWorld.vue';
 import Button from './components/Button.vue';
+import Header from './components/Header.vue';
 // exports the App component and all components used in app to the Index.html
 export default {
   name: 'App',
   components: {
     HelloWorld, 
-    Button
+    Button, 
+    Header
   },
   // methods to be exported
   methods: {
@@ -33,6 +35,7 @@ export default {
 <!-- template that renders HelloWorld Component to the DOM -->
 <template>
   <div>
+    <Header/>
     <HelloWorld/>
     <!-- called button method on button -->
     <!-- @click functions similiarly to onClick -->

@@ -4,6 +4,6 @@
 <template>
   <!-- html div -->
   <div>
-      <h1>Hello World</h1>
+      <h2>Hello World! Click the Buttons</h2>
   </div>
 </template>
