@@ -2,9 +2,9 @@
 
 ## What is VueJS and Why use it?
 
-Vue.js is an open sourced Javascript frontend 'Model-View_ViewModel' framework for building user interfaces following the 'single-page' application model. It was first developed by Evan You in 2014 and is based off of Angular and his experiences with whate he liked in Angular. Similar to React.js and Angular, Vue.js is component based and uses declarative rendering. Since Vue.JS is a framework, there are plenty of built-in plugins and libraries that can be used which streamlines and simplifies the development process.
+Vue.js is an open source JavaScript frontend framework for building user interfaces following the single-page application model. Developed by Evan You in 2014, it is based on Angular and his experiences with what he liked in Angular. Similar to React.js and Angular, Vue.js is component-based and uses declarative rendering. Since Vue.js is a framework, it has built-in plugins and libraries that can streamline and simplify the development process.
 
-Vue.JS also resembles the standard html templates when making components. How Vue.js works is that it extends HTML in the form of components for reusuability. IE:
+Vue.js extends HTML in the form of components for reusability. Its components resemble standard HTML templates. To create a simple Vue.js component that renders "Hello World" to the UI, the code would be:
 
 ```
 <template>
@@ -13,9 +13,6 @@ Vue.JS also resembles the standard html templates when making components. How Vu
     </div>
 </template>
 ```
-
-The code above is a simple Vue.js component that will render 'Hello World' to the UI. 
-
 
 ### Getting started
 
@@ -127,4 +124,7 @@ Header Component:
 </script>
 ```
 
-In the brower, you will notice that all three components are rendered and the count is incremented based on the buttons pressed. 
+In the brower, you will notice that all three components are rendered and the count is incremented based on the buttons pressed.
+
+Additionally, You will also find form component. This form component is a way for users to contact you. 
+* it currently does not support state. Will be implemented in the future.

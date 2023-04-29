@@ -22,6 +22,10 @@ export default {
     },
     decrement() {
       this.count--;
+    },
+    // updates the state of the contactMe component
+    handleFormSubmit(formData) {
+      console.log("Form Data: ", formData);
     }
   },
   // data is used to handle state in VueJs
@@ -55,6 +59,7 @@ export default {
     <p class="count-tracker">{{ count }}</p>
   </div>
   <div>
-    <ContactMe class="contact-form"/>
+<!-- @submit-form calls the method handleFormSubmit when the event is passed from the contactMe component by the handleSubmit method-->
+    <ContactMe class="contact-form" @submit-form="handleFormSubmit"/>
   </div>
 </template>
