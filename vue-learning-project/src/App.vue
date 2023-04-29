@@ -26,13 +26,17 @@ export default {
     // updates the state of the contactMe component
     handleFormSubmit(formData) {
       console.log("Form Data: ", formData);
+    },
+    redirectContactMe() {
+      this.renderContactMe = !this.renderContactMe
     }
   },
   // data is used to handle state in VueJs
   // in this case data is handling the state of count which is being incremented when the button is clicked.
   data() {
     return {
-      count: 0
+      count: 0,
+      renderContactMe: false
     }
   },
 }
@@ -42,7 +46,7 @@ export default {
 <template>
   <div>
     <!-- class = 'some name' is analogous to className = 'some name' -->
-    <Header class="counter-header"/>
+    <Header class="counter-header" @redirect-contact-me="redirectContactMe"/>
     <HelloWorld class="intro"/>
     <!-- called button method on button -->
     <!-- @click functions similiarly to onClick -->
@@ -58,7 +62,7 @@ export default {
     </div>
     <p class="count-tracker">{{ count }}</p>
   </div>
-  <div>
+  <div v-if="renderContactMe">
 <!-- @submit-form calls the method handleFormSubmit when the event is passed from the contactMe component by the handleSubmit method-->
     <ContactMe class="contact-form" @submit-form="handleFormSubmit"/>
   </div>
