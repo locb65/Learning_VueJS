@@ -9,6 +9,11 @@ export default {
   components: {
     HelloWorld, 
     Button
+  },
+  methods: {
+    clickedButton() {
+      console.log('I have been clicked')
+    }
   }
 }
 
@@ -17,6 +22,6 @@ export default {
 <template>
   <div>
     <HelloWorld/>
-    <Button/>
+    <Button @click="clickedButton"/>
   </div>
 </template>
