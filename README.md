@@ -127,4 +127,15 @@ Header Component:
 In the brower, you will notice that all three components are rendered and the count is incremented based on the buttons pressed.
 
 Additionally, You will also find form component. This form component is a way for users to contact you. 
-* it currently does not support state. Will be implemented in the future.
+* the form is not rendered initially
+    * if you click on the contact me in the header the form will render.
+
+That is all for now. 
+
+## Future features
+* implement more components
+* implement routing to mimic multiple page websites with routes using vue-router
+* implement a backend that will store contact me form submissions
+
+
+
