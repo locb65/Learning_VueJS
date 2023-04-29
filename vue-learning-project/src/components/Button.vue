@@ -3,7 +3,8 @@
 <template>
     <div>
         <button>
-            Press Me
+            <!-- <slot> tag allows for flexiblity in the rendering of component content -->
+            <slot></slot>
         </button>
     </div>
 </template>

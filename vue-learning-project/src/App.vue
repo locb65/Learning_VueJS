@@ -13,8 +13,11 @@ export default {
   // methods to be exported
   methods: {
     // event listener method for button
-    clickedButton() {
-      this.count++
+    increment() {
+      this.count++;
+    },
+    decrement() {
+      this.count--;
     }
   },
   // data is used to handle state in VueJs
@@ -36,7 +39,11 @@ export default {
     <!-- :count="count" is passing the prop from the data function to the child component of Button -->
     <!-- :count="count" is analogous to count={count} in reactjs
     and it is also a shorthand version of v-bind:count='count' -->
-    <Button @click="clickedButton" :count="count"/>
+    <!-- Added another button to decrement count -->
+    <!-- the Text Increment and Decrement is rendered to UI due to <slot> tag in child component.
+      Without the slot tag, What is hardcoded in the child component will be rendered instead for both buttons -->
+    <Button @click="increment" :count="count">Increment</Button> 
+    <Button @click="decrement" :count="count">Decrement</Button>
     <p>{{ count }}</p>
   </div>
 </template>
