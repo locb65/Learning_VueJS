@@ -1,0 +1,14 @@
+.counter-header,
+.button,
+.count-tracker,
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.counter-header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    font-size: 24px;
+}

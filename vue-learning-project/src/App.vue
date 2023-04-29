@@ -35,8 +35,9 @@ export default {
 <!-- template that renders HelloWorld Component to the DOM -->
 <template>
   <div>
-    <Header/>
-    <HelloWorld/>
+    <!-- class = 'some name' is analogous to className = 'some name' -->
+    <Header class="counter-header"/>
+    <HelloWorld class="intro"/>
     <!-- called button method on button -->
     <!-- @click functions similiarly to onClick -->
     <!-- :count="count" is passing the prop from the data function to the child component of Button -->
@@ -45,8 +46,10 @@ export default {
     <!-- Added another button to decrement count -->
     <!-- the Text Increment and Decrement is rendered to UI due to <slot> tag in child component.
       Without the slot tag, What is hardcoded in the child component will be rendered instead for both buttons -->
-    <Button @click="increment" :count="count">Increment</Button> 
-    <Button @click="decrement" :count="count">Decrement</Button>
-    <p>{{ count }}</p>
+    <div class="button">
+      <Button @click="increment" :count="count">Increment</Button> 
+      <Button @click="decrement" :count="count">Decrement</Button>
+    </div>
+    <p class="count-tracker">{{ count }}</p>
   </div>
 </template>
